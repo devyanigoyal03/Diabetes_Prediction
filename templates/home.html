@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prediction for Diabetes</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="contact-box">
+        <div class="left"></div>
+        <div class="right">
+          <h2>Prediction for Diabetes</h2>
+
+          <div class="form">
+            <form action="{{ url_for('predict_datapoint')}}" method="post">
+              <input
+                type="number"
+                class="field"
+                name="Pregnancies"
+                id="Pregnancies"
+                placeholder="Pregnancies"
+                required="required"
+              />
+              <input
+                type="number"
+                class="field"
+                name="Glucose"
+                id="Glucose"
+                placeholder="Glucose"
+                required="required"
+              />
+              <input
+                type="number"
+                class="field"
+                name="BloodPressure"
+                id="BloodPressure"
+                placeholder="Blood Pressure"
+                required="required"
+              />
+              <input
+                type="number"
+                class="field"
+                name="SkinThickness"
+                id="SkinThickness"
+                placeholder="Skin Thickness"
+                required="required"
+              />
+              <input
+                type="number"
+                class="field"
+                name="Insulin"
+                id="Insulin"
+                placeholder="Insulin"
+                required="required"
+              />
+              <input
+                type="text"
+                class="field"
+                name="BMI"
+                id="BMI"
+                placeholder="BMI"
+                required="required"
+              />
+              <input
+                type="text"
+                class="field"
+                name="DiabetesPedigreeFunction"
+                id="DiabetesPedigreeFunction"
+                placeholder="Diabetes Pedigree Function"
+                required="required"
+              />
+              <input
+                type="number"
+                class="field"
+                name="Age"
+                id="Age"
+                placeholder="Age"
+                required="required"
+              />
+              <input type="submit" class="btn" value="Predict"/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{result}}
+  </body>
+</html>

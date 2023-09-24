@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <style>
+        /* Existing CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn-predict {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-predict:hover {
+            background-color: #0056b3;
+        }
+
+        /* New CSS styles for additional content */
+        .content {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .content h2 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .content a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="container">
+        <h1>Diabetes Prediction</h1>
+        <p>Click the button below to predict diabetes:</p>
+        <button class="btn-predict" onclick="window.location.href='{{ url_for('predict_datapoint') }}'">Predict Diabetes</button>
+    </div>
+
+    <div class="content">
+        <h2>About Diabetes</h2>
+        <p>Diabetes is a chronic medical condition that affects how your body processes glucose (sugar). There are several types of diabetes, including Type 1, Type 2, and gestational diabetes. It's important to manage diabetes properly to maintain good health.</p>
+
+        <h2>Diabetes Statistics</h2>
+        <p>Here are some key statistics related to diabetes:</p>
+        <ul>
+            <li>Over 34 million people in the United States have diabetes.</li>
+            <li>Diabetes is a leading cause of kidney failure, blindness, and lower limb amputation.</li>
+            <li>Proper management of diabetes through lifestyle changes and medications can help control blood sugar levels.</li>
+        </ul>
+
+        <h2>Resources</h2>
+        <p>For more information about diabetes, you can visit the following resources:</p>
+        <ul>
+            <li><a href="https://www.diabetes.org/">American Diabetes Association</a></li>
+            <li><a href="https://www.cdc.gov/diabetes/index.html">CDC Diabetes</a></li>
+            <li><a href="https://www.who.int/health-topics/diabetes#tab=tab_1">World Health Organization - Diabetes</a></li>
+        </ul>
+    </div>
+</body>
+</html>
